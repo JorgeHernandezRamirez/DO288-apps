@@ -12,8 +12,8 @@ RUN sed -i 's/Listen 80/Listen 8080/' /etc/httpd/conf/httpd.conf \
   && chmod -R g=u /var/log/httpd /var/run/httpd /run/php-fpm
 
 COPY script.sh /root
-RUN  chgrp 0 script.sh
-RUN  chmod g+x script.sh
+RUN  chgrp 0 /root/script.sh
+RUN  chmod g+x /root/script.sh
   
 EXPOSE 8080
 
