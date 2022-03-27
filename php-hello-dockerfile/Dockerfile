@@ -17,7 +17,7 @@ RUN  chmod g+x /root/script.sh
   
 EXPOSE 8080
 
-USER 1001
+USER 0
 
 CMD php-fpm & httpd -D FOREGROUND
 
