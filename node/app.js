@@ -1,8 +1,7 @@
 const Fastify = require('fastify')
 const mail = require('./mail.js')
 const server = Fastify()
-const request = require('request');
-
+const request = require('request')
 
 server.get('/', (request, reply) => {
     mail().then(data => reply.send({status: 'ok', data: data})).catch(err => reply.status(500).send({status: 'ko', err: err}))
@@ -19,4 +18,4 @@ server.get('/nginx', (request_value, reply) => {
     });
 })
 
-server.listen(8080)
+server.listen(8080, '0.0.0.0');
