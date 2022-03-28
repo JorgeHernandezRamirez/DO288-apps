@@ -19,9 +19,4 @@ server.get('/nginx', (request_value, reply) => {
     });
 })
 
-
-
-
-
-
-server.listen(3000)
+server.listen(8080)
