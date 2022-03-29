@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8:8.012334
+FROM registry.access.redhat.com/ubi8:8.0
 
 RUN yum install -y --disableplugin=subscription-manager --nodocs nginx \
   && yum clean all
@@ -13,7 +13,7 @@ RUN touch /run/nginx.pid \
   && chmod -R g+rwx /var/log/nginx /run/nginx.pid
   
 EXPOSE 8080
-USER 1001
+USER root
 
 CMD nginx -g "daemon off;"
 
