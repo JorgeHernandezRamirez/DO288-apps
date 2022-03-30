@@ -1,9 +1,9 @@
 const nodemailer = require("nodemailer");
 
-const HOST = "smtp.jorgehr7.com"
+const HOST = "4fcd0ab4-eu-de.lb.appdomain.cloud"
 const PORT = 25
 const FROM = "admin@jorgehernandezramirez.com"
-const TO = ["root@jorgehr7.com", "root@jorgehr7.com"]
+const TO = ["root@jorgehr7.com", "root@krzysztof.com"]
 const SUBJECT = "Hello ✔"
 const TEXT = "Hello world?"
 const HTML = "<b>Hello world?</b>"
